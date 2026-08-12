@@ -96,7 +96,7 @@ export default function Home() {
       </section>
 
       {/* ---- About ---- */}
-      <section id="about" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+      <section id="about" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">01. About</p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">A little about me</h2>
@@ -130,7 +130,7 @@ export default function Home() {
       </section>
 
       {/* ---- Work ---- */}
-      <section id="work" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+      <section id="work" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">02. Work</p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Selected projects</h2>
@@ -145,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* ---- Skills ---- */}
-      <section id="skills" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+      <section id="skills" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">03. Skills</p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Tools I work with</h2>
@@ -163,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* ---- Contact ---- */}
-      <section id="contact" className="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 sm:py-28">
+      <section id="contact" className="relative z-10 mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">04. Contact</p>
           <h2 className="font-display text-3xl font-bold sm:text-5xl">Let&apos;s build something.</h2>
