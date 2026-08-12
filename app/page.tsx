@@ -65,7 +65,10 @@ export default function Home() {
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
           <p className="mb-4 font-mono text-sm text-accent2">Hi, my name is</p>
           <h1 className="break-words font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-            Muhammad Umair Saeed<span className="text-gradient">.</span>
+            Muhammad <br className="sm:hidden" />
+            Umair
+            <br />
+            Saeed<span className="text-gradient">.</span>
           </h1>
           <h2 className="mt-3 font-display text-xl font-semibold text-muted sm:text-3xl">
             Founder, Chairman &amp; CEO — IoBM
