@@ -12,13 +12,13 @@ npm run dev
 
 Open http://localhost:3000.
 
-## Content is placeholder
+## Content
 
-Everything user-facing is placeholder copy, meant to be swapped:
-
-- `app/page.tsx` — hero tagline/role, `PROJECTS` array, `SKILLS` array,
-  stats row, contact email/social links.
-- `app/layout.tsx` — page `<title>`/description metadata.
+Bio, role, and the `PROJECTS` list (IoBM, Yoojel, DigiEx, Cellisys, RupeeCoin)
+in `app/page.tsx` are sourced from public reporting (see commit history for
+sources — Gulf Times, Outlook India, The Org, LinkedIn). Contact email and
+Instagram were provided directly. Still missing: a headshot/photo — swap in
+when available.
 
 ## Structure
 

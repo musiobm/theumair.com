@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const LINKS = [
   { href: "#about", label: "About" },
   { href: "#work", label: "Work" },
   { href: "#skills", label: "Skills" },
+  { href: "/news", label: "News" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -30,11 +32,17 @@ export default function Nav() {
           umair<span className="text-gradient">.</span>
         </a>
         <div className="hidden items-center gap-8 text-sm text-muted md:flex">
-          {LINKS.map((l) => (
-            <a key={l.href} href={l.href} className="transition hover:text-white">
-              {l.label}
-            </a>
-          ))}
+          {LINKS.map((l) =>
+            l.href.startsWith("/") ? (
+              <Link key={l.href} href={l.href} className="transition hover:text-white">
+                {l.label}
+              </Link>
+            ) : (
+              <a key={l.href} href={l.href} className="transition hover:text-white">
+                {l.label}
+              </a>
+            )
+          )}
         </div>
         <a
           href="#contact"

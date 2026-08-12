@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowDown, Globe, Instagram, Linkedin, Mail } from "lucide-react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
@@ -9,39 +9,48 @@ import ProjectCard from "@/components/ProjectCard";
 // Three.js touches `window` on mount — keep it out of the server render entirely.
 const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
 
-// ---------------------------------------------------------------
-// PLACEHOLDER CONTENT — swap everything below for the real thing.
-// ---------------------------------------------------------------
+const LINKEDIN_URL = "https://www.linkedin.com/in/muhammad-umair-saeed-8896641b/";
+const IOBM_URL = "https://www.io-bm.com";
+const INSTAGRAM_URL = "https://www.instagram.com/muhammedumairsaeed";
+const EMAIL = "umair@io-bm.com";
+
 const PROJECTS = [
   {
-    title: "Project One",
-    description: "One-line placeholder description of what this project does and the impact it had.",
-    tags: ["Next.js", "TypeScript"],
+    title: "IoBM",
+    description: "Founder, Chairman & CEO. A global tech company spanning AI, cybersecurity, robotics, blockchain, EVs, and satellite comms across UAE, EMEA, USA & Canada.",
+    tags: ["AI", "Cybersecurity", "Robotics"],
     gradient: "bg-accent",
   },
   {
-    title: "Project Two",
-    description: "One-line placeholder description of what this project does and the impact it had.",
-    tags: ["React", "Node.js"],
+    title: "Yoojel",
+    description: "IoBM's AI ecosystem — five platforms (Student, Professional, Business, Enterprise, MovieMaker) unifying education, enterprise ops, and creative production.",
+    tags: ["AI Ecosystem", "Product Launch"],
     gradient: "bg-accent2",
   },
   {
-    title: "Project Three",
-    description: "One-line placeholder description of what this project does and the impact it had.",
-    tags: ["Design", "Product"],
+    title: "DigiEx",
+    description: "A post-quantum cryptocurrency exchange built for the next generation of digital-asset security.",
+    tags: ["Post-Quantum", "Fintech"],
     gradient: "bg-accent",
   },
   {
-    title: "Project Four",
-    description: "One-line placeholder description of what this project does and the impact it had.",
-    tags: ["API", "Cloud"],
+    title: "Cellisys",
+    description: "AI-led Human Cell Programming Lab applying synthetic biology to regenerative and precision medicine.",
+    tags: ["Synthetic Biology", "AI"],
     gradient: "bg-accent2",
+  },
+  {
+    title: "RupeeCoin",
+    description: "Co-Founder & CEO since 2022 — a venture in the digital-currency and blockchain infrastructure space.",
+    tags: ["Blockchain", "Co-Founder"],
+    gradient: "bg-accent",
   },
 ];
 
 const SKILLS = [
-  "TypeScript", "React", "Next.js", "Node.js", "Python",
-  "UI/UX Design", "Three.js", "Cloud Infra", "SQL", "Product Strategy",
+  "Cybersecurity", "AI Strategy", "Blockchain & Web3", "Post-Quantum Security",
+  "Robotics & Automation", "Electric Vehicles", "Fintech", "Digital Identity",
+  "Corporate Strategy", "Team Leadership",
 ];
 
 export default function Home() {
@@ -56,14 +65,14 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-6xl px-6 pt-20">
           <p className="mb-4 font-mono text-sm text-accent2">Hi, my name is</p>
           <h1 className="font-display text-5xl font-extrabold tracking-tight sm:text-7xl">
-            Umair<span className="text-gradient">.</span>
+            Muhammad Umair Saeed<span className="text-gradient">.</span>
           </h1>
           <h2 className="mt-3 font-display text-2xl font-semibold text-muted sm:text-3xl">
-            [Placeholder role/title]
+            Founder, Chairman &amp; CEO — IoBM
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
-            Placeholder tagline — a short line about what you build, who you build it for,
-            and what makes your work distinct. Swap this out with the real pitch.
+            &ldquo;AI should empower people and organisations by making knowledge more
+            accessible, decisions more informed, and innovation more achievable.&rdquo;
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -97,16 +106,21 @@ export default function Home() {
         </Reveal>
         <Reveal delay={0.1} className="mt-6 max-w-2xl">
           <p className="text-base leading-relaxed text-muted">
-            Placeholder bio paragraph. Two or three sentences about your background,
-            what you focus on today, and what drives your work. Replace with the real story.
+            Muhammad Umair Saeed is a Pakistani entrepreneur, technologist, and cybersecurity
+            expert with 26+ years of IT leadership. He holds a B.E. in Electronics from
+            Sir Syed University of Engineering and Technology and an MBA from London Business
+            School. Since founding IoBM in April 2016, he has grown it into a diversified
+            global technology company spanning AI, cybersecurity, robotics, blockchain, and
+            electric mobility. &ldquo;Success is rarely a straightforward path,&rdquo; he says.
+            &ldquo;It is often a complex journey marked by challenges.&rdquo;
           </p>
         </Reveal>
         <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
           {[
-            { label: "Years experience", value: "X+" },
-            { label: "Projects shipped", value: "X" },
-            { label: "Happy clients", value: "X" },
-            { label: "Cups of coffee", value: "∞" },
+            { label: "Years in IT leadership", value: "26+" },
+            { label: "Founded IoBM", value: "2016" },
+            { label: "Ventures led", value: "5+" },
+            { label: "Markets served", value: "UAE·USA·EU" },
           ].map((s, i) => (
             <Reveal key={s.label} delay={0.05 * i}>
               <div className="rounded-xl border border-white/10 bg-panel p-4">
@@ -157,20 +171,20 @@ export default function Home() {
           <p className="mb-2 font-mono text-sm text-accent2">04. Contact</p>
           <h2 className="font-display text-3xl font-bold sm:text-5xl">Let&apos;s build something.</h2>
           <p className="mx-auto mt-4 max-w-md text-base text-muted">
-            Placeholder CTA — swap in a real invitation to reach out, plus your actual email.
+            For business inquiries, reach out directly.
           </p>
           <a
-            href="mailto:hello@theumair.com"
+            href={`mailto:${EMAIL}`}
             className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-black transition hover:bg-white/90"
           >
-            hello@theumair.com
+            {EMAIL}
           </a>
         </Reveal>
         <div className="mt-10 flex items-center justify-center gap-6 text-muted">
-          <a href="#" aria-label="GitHub" className="transition hover:text-white"><Github size={20} /></a>
-          <a href="#" aria-label="LinkedIn" className="transition hover:text-white"><Linkedin size={20} /></a>
-          <a href="#" aria-label="Twitter" className="transition hover:text-white"><Twitter size={20} /></a>
-          <a href="mailto:hello@theumair.com" aria-label="Email" className="transition hover:text-white"><Mail size={20} /></a>
+          <a href={`mailto:${EMAIL}`} aria-label="Email" className="transition hover:text-white"><Mail size={20} /></a>
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="transition hover:text-white"><Linkedin size={20} /></a>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition hover:text-white"><Instagram size={20} /></a>
+          <a href={IOBM_URL} target="_blank" rel="noopener noreferrer" aria-label="IoBM website" className="transition hover:text-white"><Globe size={20} /></a>
         </div>
       </section>
 

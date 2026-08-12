@@ -14,8 +14,9 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Umair — Portfolio",
-  description: "Placeholder portfolio site for theumair.com.",
+  title: "Muhammad Umair Saeed — Founder & CEO, IoBM",
+  description:
+    "Muhammad Umair Saeed is the Founder, Chairman & CEO of IoBM, building across AI, cybersecurity, robotics, blockchain, and electric mobility.",
 };
 
 export const viewport = {
