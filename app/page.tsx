@@ -5,6 +5,7 @@ import { ArrowDown, Globe, Instagram, Linkedin, Mail } from "lucide-react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
+import ScrollFrames from "@/components/ScrollFrames";
 
 // Three.js touches `window` on mount — keep it out of the server render entirely.
 const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
@@ -55,7 +56,8 @@ const SKILLS = [
 
 export default function Home() {
   return (
-    <main id="top" className="relative min-h-screen bg-bg text-white">
+    <main id="top" className="relative min-h-screen text-white">
+      <ScrollFrames />
       <Nav />
 
       {/* ---- Hero ---- */}
