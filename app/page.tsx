@@ -45,11 +45,7 @@ const PROJECTS = [
   },
 ];
 
-const SKILLS = [
-  "Cybersecurity", "AI Strategy", "Blockchain & Web3", "Post-Quantum Security",
-  "Robotics & Automation", "Electric Vehicles", "Fintech", "Digital Identity",
-  "Corporate Strategy", "Team Leadership",
-];
+const GOOGLE_RESULT_URL = "https://share.google/G17BTXpcb8HPAFbGR";
 
 export default function Home() {
   const [aboutExpanded, setAboutExpanded] = useState(false);
@@ -195,21 +191,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---- Skills ---- */}
-      <section id="skills" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+      {/* ---- Google ---- */}
+      <section id="press" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
-          <p className="mb-2 font-mono text-sm text-accent2">03. Skills</p>
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">Tools I work with</h2>
+          <p className="mb-2 font-mono text-sm text-accent2">03. Recognition</p>
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">Featured on Google</h2>
         </Reveal>
-        <Reveal delay={0.1} className="mt-8 flex flex-wrap gap-3">
-          {SKILLS.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-white/10 bg-panel px-4 py-2 text-sm text-muted transition hover:border-accent hover:text-white"
-            >
-              {skill}
+        <Reveal delay={0.1} className="mt-8 max-w-md">
+          <a
+            href={GOOGLE_RESULT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-[10px] transition hover:border-accent/40 hover:bg-white/10"
+          >
+            <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white">
+              <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M19.6 10.23c0-.82-.1-1.42-.25-2.05H10v3.72h5.5c-.15.96-.74 2.31-2.04 3.22v2.45h3.16c1.89-1.73 2.98-4.3 2.98-7.34z" fill="#4285F4" />
+                <path d="M10 20c2.7 0 4.96-.89 6.62-2.42l-3.16-2.45c-.87.59-2.01.95-3.46.95-2.66 0-4.91-1.79-5.72-4.2H1.03v2.53C2.68 17.75 6.09 20 10 20z" fill="#34A853" />
+                <path d="M4.28 11.88A5.94 5.94 0 0 1 4 10c0-.65.11-1.28.28-1.88V5.59H1.03A9.96 9.96 0 0 0 0 10c0 1.61.39 3.14 1.03 4.41l3.25-2.53z" fill="#FBBC05" />
+                <path d="M10 3.96c1.47 0 2.79.5 3.83 1.49l2.87-2.87C14.95.99 12.7 0 10 0 6.09 0 2.68 2.25 1.03 5.59l3.25 2.53C5.09 5.71 7.34 3.96 10 3.96z" fill="#EA4335" />
+              </svg>
             </span>
-          ))}
+            <span className="flex flex-col text-left">
+              <span className="font-display text-base font-semibold text-white">Muhammad Umair Saeed</span>
+              <span className="text-sm text-muted">Entrepreneur — view on Google</span>
+            </span>
+          </a>
         </Reveal>
       </section>
 
