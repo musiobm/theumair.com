@@ -1,14 +1,10 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { ArrowDown, Globe, Instagram, Linkedin, Mail } from "lucide-react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
 import ScrollFrames from "@/components/ScrollFrames";
-
-// Three.js touches `window` on mount — keep it out of the server render entirely.
-const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/muhammad-umair-saeed-8896641b/";
 const IOBM_URL = "https://www.io-bm.com";
@@ -63,7 +59,6 @@ export default function Home() {
       {/* ---- Hero ---- */}
       <section className="relative flex min-h-screen items-center overflow-hidden">
         <div className="absolute inset-0 bg-grid-fade" />
-        <Scene />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
           <p className="mb-4 font-mono text-sm text-accent2">Hi, my name is</p>
           <h1 className="break-words font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
