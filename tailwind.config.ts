@@ -13,7 +13,7 @@ const config: Config = {
         panel: "#15151f",
         accent: "#7c5cff",
         accent2: "#22d3ee",
-        muted: "#8b8b9c",
+        muted: "#ffffff",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],

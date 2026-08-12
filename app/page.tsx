@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { ArrowDown, Globe, Instagram, Linkedin, Mail } from "lucide-react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
@@ -51,6 +52,8 @@ const SKILLS = [
 ];
 
 export default function Home() {
+  const [aboutExpanded, setAboutExpanded] = useState(false);
+
   return (
     <main id="top" className="relative min-h-screen text-white">
       <ScrollFrames />
@@ -99,18 +102,66 @@ export default function Home() {
       <section id="about" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">01. About</p>
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">A little about me</h2>
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">
+            Muhammad Umair Saeed <span className="text-accent2">::</span> Building What Comes Next
+          </h2>
         </Reveal>
         <Reveal delay={0.1} className="mt-6 max-w-2xl">
           <p className="text-base leading-relaxed text-muted">
-            Muhammad Umair Saeed is a Pakistani entrepreneur, technologist, and cybersecurity
-            expert with 26+ years of IT leadership. He holds a B.E. in Electronics from
-            Sir Syed University of Engineering and Technology and an MBA from London Business
-            School. Since founding IoBM in April 2016, he has grown it into a diversified
-            global technology company spanning AI, cybersecurity, robotics, blockchain, and
-            electric mobility. &ldquo;Success is rarely a straightforward path,&rdquo; he says.
-            &ldquo;It is often a complex journey marked by challenges.&rdquo;
+            Muhammad Umair Saeed is an entrepreneur, technology visionary, and the Founder of
+            IoBM, a technology enterprise with a growing portfolio across some of the
+            world&rsquo;s most consequential industries.{" "}
+            <button
+              type="button"
+              onClick={() => setAboutExpanded((v) => !v)}
+              className="font-semibold text-accent2 transition hover:text-white"
+            >
+              {aboutExpanded ? "(Less)" : "(More)"}
+            </button>
           </p>
+          {aboutExpanded && (
+            <div className="mt-4 flex flex-col gap-4">
+              <p className="text-base leading-relaxed text-muted">
+                Under his leadership, IoBM has developed and introduced technology ventures
+                and products including Yoojel, Cellisys, and Digiex, alongside initiatives in
+                artificial intelligence, cybersecurity, robotics, Web3, post-quantum
+                technologies, energy, electric mobility, healthcare, biotechnology, satellite
+                communications, and advanced digital infrastructure.
+              </p>
+              <p className="text-base leading-relaxed text-muted">
+                His approach to innovation is deliberately broad. He sees the future not as a
+                collection of separate industries, but as an interconnected ecosystem in
+                which technology, energy, mobility, healthcare, communications, and digital
+                infrastructure increasingly converge.
+              </p>
+              <p className="text-base leading-relaxed text-muted">
+                Yoojel reflects IoBM&rsquo;s ambition in artificial intelligence and
+                next-generation digital discovery. Cellisys represents its work at the
+                intersection of technology, biotechnology, and healthcare. Digiex extends
+                IoBM&rsquo;s vision into digital finance and blockchain-enabled financial
+                technology.
+              </p>
+              <p className="text-base leading-relaxed text-muted">
+                Beyond its technology products, IoBM&rsquo;s wider initiatives encompass
+                energy and power projects, electric-vehicle ecosystems, healthcare solutions,
+                satellite communications, cybersecurity, robotics, and emerging digital
+                infrastructure.
+              </p>
+              <p className="text-base leading-relaxed text-muted">
+                For Umair, entrepreneurship is not simply about creating companies or
+                launching products. It is about recognising possibilities before they become
+                obvious and having the determination to turn ambitious ideas into something
+                tangible.
+              </p>
+              <blockquote className="border-l-2 border-accent pl-4 text-base italic leading-relaxed text-muted">
+                &laquo;&ldquo;The future does not belong to those who predict it. It belongs
+                to those willing to build it.&rdquo;&raquo;
+                <footer className="mt-2 text-sm font-semibold not-italic text-white">
+                  Muhammad Umair Saeed
+                </footer>
+              </blockquote>
+            </div>
+          )}
         </Reveal>
         <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {[
