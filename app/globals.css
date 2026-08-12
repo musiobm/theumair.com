@@ -6,6 +6,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Safety net for very narrow viewports (e.g. a folded phone's cover
+   screen, ~280-320px) — nothing on this site should ever cause
+   page-level horizontal scroll. */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #08080c;
   color: #f2f2f5;

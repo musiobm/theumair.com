@@ -62,28 +62,28 @@ export default function Home() {
       <section className="relative flex min-h-screen items-center overflow-hidden">
         <div className="absolute inset-0 bg-grid-fade" />
         <Scene />
-        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-20">
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
           <p className="mb-4 font-mono text-sm text-accent2">Hi, my name is</p>
-          <h1 className="font-display text-5xl font-extrabold tracking-tight sm:text-7xl">
+          <h1 className="break-words font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
             Muhammad Umair Saeed<span className="text-gradient">.</span>
           </h1>
-          <h2 className="mt-3 font-display text-2xl font-semibold text-muted sm:text-3xl">
+          <h2 className="mt-3 font-display text-xl font-semibold text-muted sm:text-3xl">
             Founder, Chairman &amp; CEO — IoBM
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
             &ldquo;AI should empower people and organisations by making knowledge more
             accessible, decisions more informed, and innovation more achievable.&rdquo;
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
             <a
               href="#work"
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-white/90 sm:px-6 sm:py-3"
             >
               View my work
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent hover:bg-accent/10"
+              className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent hover:bg-accent/10 sm:px-6 sm:py-3"
             >
               Get in touch
             </a>
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* ---- About ---- */}
-      <section id="about" className="mx-auto max-w-6xl px-6 py-28">
+      <section id="about" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">01. About</p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">A little about me</h2>
@@ -115,16 +115,16 @@ export default function Home() {
             &ldquo;It is often a complex journey marked by challenges.&rdquo;
           </p>
         </Reveal>
-        <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {[
             { label: "Years in IT leadership", value: "26+" },
             { label: "Founded IoBM", value: "2016" },
             { label: "Ventures led", value: "5+" },
-            { label: "Markets served", value: "UAE·USA·EU" },
+            { label: "Markets served", value: "Global" },
           ].map((s, i) => (
             <Reveal key={s.label} delay={0.05 * i}>
-              <div className="rounded-xl border border-white/10 bg-panel p-4">
-                <p className="font-display text-2xl font-bold text-gradient">{s.value}</p>
+              <div className="h-full rounded-xl border border-white/10 bg-panel p-3 sm:p-4">
+                <p className="break-words font-display text-lg font-bold text-gradient sm:text-2xl">{s.value}</p>
                 <p className="mt-1 text-xs text-muted">{s.label}</p>
               </div>
             </Reveal>
@@ -133,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* ---- Work ---- */}
-      <section id="work" className="mx-auto max-w-6xl px-6 py-28">
+      <section id="work" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">02. Work</p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Selected projects</h2>
@@ -148,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* ---- Skills ---- */}
-      <section id="skills" className="mx-auto max-w-6xl px-6 py-28">
+      <section id="skills" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">03. Skills</p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Tools I work with</h2>
@@ -166,7 +166,7 @@ export default function Home() {
       </section>
 
       {/* ---- Contact ---- */}
-      <section id="contact" className="mx-auto max-w-6xl px-6 py-28 text-center">
+      <section id="contact" className="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">04. Contact</p>
           <h2 className="font-display text-3xl font-bold sm:text-5xl">Let&apos;s build something.</h2>

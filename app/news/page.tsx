@@ -91,15 +91,15 @@ export default function NewsPage() {
   return (
     <main className="min-h-screen bg-bg text-white">
       <header className="border-b border-white/10">
-        <div className="mx-auto flex max-w-4xl items-center gap-3 px-6 py-5">
-          <Link href="/" aria-label="Back home" className="rounded-lg p-1.5 text-muted transition hover:bg-white/5 hover:text-white">
+        <div className="mx-auto flex max-w-4xl items-center gap-3 px-4 py-4 sm:px-6 sm:py-5">
+          <Link href="/" aria-label="Back home" className="flex-shrink-0 rounded-lg p-1.5 text-muted transition hover:bg-white/5 hover:text-white">
             <ArrowLeft size={18} />
           </Link>
-          <span className="font-display text-sm font-semibold">umair<span className="text-gradient">.</span> / News</span>
+          <span className="truncate font-display text-sm font-semibold">umair<span className="text-gradient">.</span> / News</span>
         </div>
       </header>
 
-      <div className="mx-auto max-w-4xl px-6 py-16">
+      <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
         <Reveal>
           <p className="mb-2 flex items-center gap-2 font-mono text-sm text-accent2">
             <Newspaper size={14} /> Press
@@ -137,7 +137,7 @@ export default function NewsPage() {
                       className="flex-shrink-0 text-muted transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
                     />
                   </div>
-                  <h2 className="font-display text-base font-semibold leading-snug text-white">
+                  <h2 className="break-words font-display text-base font-semibold leading-snug text-white">
                     {item.title}
                   </h2>
                   <p className="text-sm leading-relaxed text-muted">{item.blurb}</p>
