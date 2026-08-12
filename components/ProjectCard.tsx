@@ -39,7 +39,7 @@ export default function ProjectCard({
       onMouseMove={onMouseMove}
       onMouseLeave={reset}
       style={{ rotateX, rotateY, transformPerspective: 800 }}
-      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-[50px]"
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-[10px]"
     >
       <div
         className={`absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-20 blur-3xl transition-opacity group-hover:opacity-40 ${gradient}`}

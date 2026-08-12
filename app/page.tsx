@@ -185,8 +185,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 py-8 text-center text-xs text-muted">
-        © {new Date().getFullYear()} theumair.com — built with Next.js &amp; Three.js
+      <footer className="relative z-10 border-t border-white/10 bg-bg/80 py-8 text-center text-xs text-muted backdrop-blur-md">
+        © {new Date().getFullYear()} theumair.com — built with Next.js
       </footer>
     </main>
   );
