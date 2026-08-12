@@ -240,7 +240,10 @@ export default function Home() {
       </section>
 
       <footer className="relative z-10 border-t border-white/10 bg-bg/80 py-8 text-center text-xs text-muted backdrop-blur-md">
-        © {new Date().getFullYear()} theumair.com — built with Next.js
+        © {new Date().getFullYear()} theumair.com — powered by{" "}
+        <a href={IOBM_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-white transition hover:text-accent2">
+          IoBM
+        </a>
       </footer>
     </main>
   );
