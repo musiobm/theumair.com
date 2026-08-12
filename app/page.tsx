@@ -65,10 +65,9 @@ export default function Home() {
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
           <p className="mb-4 font-mono text-sm text-accent2">Hi, my name is</p>
           <h1 className="break-words font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-            Muhammad <br className="sm:hidden" />
-            Umair
+            Muhammad
             <br />
-            Saeed<span className="text-gradient">.</span>
+            Umair Saeed<span className="text-gradient">.</span>
           </h1>
           <h2 className="mt-3 font-display text-xl font-semibold text-muted sm:text-3xl">
             Founder, Chairman &amp; CEO — IoBM
@@ -105,9 +104,7 @@ export default function Home() {
       <section id="about" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">01. About</p>
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">
-            Muhammad Umair Saeed <span className="text-accent2">::</span> Building What Comes Next
-          </h2>
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">Building What Comes Next</h2>
         </Reveal>
         <Reveal delay={0.1} className="mt-6 max-w-2xl">
           <p className="text-base leading-relaxed text-muted">
