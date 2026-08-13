@@ -18,30 +18,28 @@ const PROJECTS = [
     description: "Founder, Chairman & CEO. A global tech company spanning AI, cybersecurity, robotics, blockchain, EVs, and satellite comms across UAE, EMEA, USA & Canada.",
     tags: ["AI", "Cybersecurity", "Robotics"],
     gradient: "bg-accent",
+    url: "https://www.io-bm.com",
   },
   {
     title: "Yoojel",
     description: "IoBM's AI ecosystem — five platforms (Student, Professional, Business, Enterprise, MovieMaker) unifying education, enterprise ops, and creative production.",
     tags: ["AI Ecosystem", "Product Launch"],
     gradient: "bg-accent2",
+    url: "https://www.io-bm.com/yoojel",
   },
   {
     title: "DigiEx",
     description: "A post-quantum cryptocurrency exchange built for the next generation of digital-asset security.",
     tags: ["Post-Quantum", "Fintech"],
     gradient: "bg-accent",
+    url: "https://www.io-bm.com/digiex",
   },
   {
     title: "Cellisys",
     description: "AI-led Human Cell Programming Lab applying synthetic biology to regenerative and precision medicine.",
     tags: ["Synthetic Biology", "AI"],
     gradient: "bg-accent2",
-  },
-  {
-    title: "RupeeCoin",
-    description: "Co-Founder & CEO since 2022 — a venture in the digital-currency and blockchain infrastructure space.",
-    tags: ["Blockchain", "Co-Founder"],
-    gradient: "bg-accent",
+    url: "https://www.io-bm.com/cellisys",
   },
 ];
 

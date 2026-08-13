@@ -9,19 +9,21 @@ export default function ProjectCard({
   description,
   tags,
   gradient,
+  url,
 }: {
   title: string;
   description: string;
   tags: string[];
   gradient: string;
+  url: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLAnchorElement>(null);
   const mx = useMotionValue(0.5);
   const my = useMotionValue(0.5);
   const rotateX = useSpring(useTransform(my, [0, 1], [8, -8]), { stiffness: 200, damping: 20 });
   const rotateY = useSpring(useTransform(mx, [0, 1], [-8, 8]), { stiffness: 200, damping: 20 });
 
-  const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const onMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const rect = ref.current?.getBoundingClientRect();
     if (!rect) return;
     mx.set((e.clientX - rect.left) / rect.width);
@@ -34,12 +36,15 @@ export default function ProjectCard({
   };
 
   return (
-    <motion.div
+    <motion.a
       ref={ref}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       onMouseMove={onMouseMove}
       onMouseLeave={reset}
       style={{ rotateX, rotateY, transformPerspective: 800 }}
-      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-[10px]"
+      className="group relative block overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-[10px]"
     >
       <div
         className={`absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-20 blur-3xl transition-opacity group-hover:opacity-40 ${gradient}`}
@@ -62,6 +67,6 @@ export default function ProjectCard({
           </span>
         ))}
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
