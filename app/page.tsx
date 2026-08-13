@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Globe, Instagram, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Globe, Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
@@ -12,6 +12,7 @@ import { NEWS, ArticleImage } from "@/lib/news";
 const LINKEDIN_URL = "https://www.linkedin.com/in/muhammad-umair-saeed-8896641b/";
 const IOBM_URL = "https://www.io-bm.com";
 const INSTAGRAM_URL = "https://www.instagram.com/muhammedumairsaeed";
+const YOUTUBE_URL = "https://youtube.com/@muhammedumairsaeed?si=s00_5fSGoobgQxgz";
 const EMAIL = "umair@io-bm.com";
 
 const PROJECTS = [
@@ -294,6 +295,7 @@ export default function Home() {
           <a href={`mailto:${EMAIL}`} aria-label="Email" className="transition hover:text-white"><Mail size={20} /></a>
           <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="transition hover:text-white"><Linkedin size={20} /></a>
           <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition hover:text-white"><Instagram size={20} /></a>
+          <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="transition hover:text-white"><Youtube size={20} /></a>
           <a href={IOBM_URL} target="_blank" rel="noopener noreferrer" aria-label="IoBM website" className="transition hover:text-white"><Globe size={20} /></a>
         </div>
       </section>
