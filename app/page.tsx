@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowDown, Globe, Instagram, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
+import { ArrowDown, ArrowUpRight, Globe, Instagram, Linkedin, Mail } from "lucide-react";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
@@ -190,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* ---- Google ---- */}
-      <section id="press" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+      <section id="google" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">03. Recognition</p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Featured on Google</h2>
@@ -218,10 +219,28 @@ export default function Home() {
         </Reveal>
       </section>
 
+      {/* ---- Press ---- */}
+      <section id="press" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+        <Reveal>
+          <p className="mb-2 font-mono text-sm text-accent2">04. Press</p>
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">In the news</h2>
+          <p className="mt-4 max-w-xl text-base text-muted">
+            Coverage of Muhammad Umair Saeed and IoBM from independent outlets.
+          </p>
+          <Link
+            href="/news"
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent hover:bg-accent/10"
+          >
+            View press coverage
+            <ArrowUpRight size={16} />
+          </Link>
+        </Reveal>
+      </section>
+
       {/* ---- Contact ---- */}
       <section id="contact" className="relative z-10 mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 sm:py-28">
         <Reveal>
-          <p className="mb-2 font-mono text-sm text-accent2">04. Contact</p>
+          <p className="mb-2 font-mono text-sm text-accent2">05. Contact</p>
           <h2 className="font-display text-3xl font-bold sm:text-5xl">Let&apos;s build something.</h2>
           <p className="mx-auto mt-4 max-w-md text-base text-muted">
             For business inquiries, reach out directly.
