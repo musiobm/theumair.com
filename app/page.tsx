@@ -7,6 +7,7 @@ import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import ProjectCard from "@/components/ProjectCard";
 import ScrollFrames from "@/components/ScrollFrames";
+import { NEWS, ArticleImage } from "@/lib/news";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/muhammad-umair-saeed-8896641b/";
 const IOBM_URL = "https://www.io-bm.com";
@@ -227,11 +228,48 @@ export default function Home() {
           <p className="mt-4 max-w-xl text-base text-muted">
             Coverage of Muhammad Umair Saeed and IoBM from independent outlets.
           </p>
+        </Reveal>
+        <div className="mt-8 flex flex-col gap-4">
+          {NEWS.slice(0, 2).map((item, i) => (
+            <Reveal key={item.url} delay={0.1 + 0.08 * i}>
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-[10px] transition hover:border-accent/40 hover:bg-white/10 sm:flex-row"
+              >
+                <ArticleImage src={item.image} alt={item.title} />
+                <div className="flex flex-1 flex-col gap-2">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2 text-xs text-muted">
+                      <span className="font-medium text-accent2">{item.outlet}</span>
+                      {item.date && (
+                        <>
+                          <span aria-hidden>·</span>
+                          <span>{item.date}</span>
+                        </>
+                      )}
+                    </div>
+                    <ArrowUpRight
+                      size={16}
+                      className="flex-shrink-0 text-muted transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+                    />
+                  </div>
+                  <h3 className="break-words font-display text-base font-semibold leading-snug text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">{item.blurb}</p>
+                </div>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={0.26}>
           <Link
             href="/news"
-            className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent hover:bg-accent/10"
+            className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent hover:bg-accent/10"
           >
-            View press coverage
+            View all press coverage
             <ArrowUpRight size={16} />
           </Link>
         </Reveal>
