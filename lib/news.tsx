@@ -75,7 +75,7 @@ export function ArticleImage({ src, alt }: { src: string; alt: string }) {
         onError={(e) => {
           e.currentTarget.style.display = "none";
         }}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover object-top"
       />
     </div>
   );
