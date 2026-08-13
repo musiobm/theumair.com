@@ -11,6 +11,7 @@ export const NEWS = [
     blurb: "Coverage of the Yoojel launch — five platforms (Student, Professional, Business, Enterprise, MovieMaker) unifying education, enterprise, and creative production under one AI ecosystem.",
     url: "https://www.gulf-times.com/article/730493/business/muhammad-umair-saeed-unveils-yoojel-iobms-next-generation-ai-ecosystem",
     image: "https://www.gulf-times.com/gulftimes/uploads/images/2026/08/04/475544.jpeg",
+    imagePosition: "top" as const,
   },
   {
     outlet: "Arab Times Kuwait",
@@ -64,7 +65,15 @@ export const NEWS = [
   },
 ];
 
-export function ArticleImage({ src, alt }: { src: string; alt: string }) {
+export function ArticleImage({
+  src,
+  alt,
+  position = "center",
+}: {
+  src: string;
+  alt: string;
+  position?: "top" | "center";
+}) {
   return (
     <div className="relative h-40 w-full flex-shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-accent/30 to-accent2/30 sm:h-auto sm:w-40">
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -75,7 +84,7 @@ export function ArticleImage({ src, alt }: { src: string; alt: string }) {
         onError={(e) => {
           e.currentTarget.style.display = "none";
         }}
-        className="absolute inset-0 h-full w-full object-cover object-top"
+        className={`absolute inset-0 h-full w-full object-cover ${position === "top" ? "object-top" : "object-center"}`}
       />
     </div>
   );

@@ -238,7 +238,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-[10px] transition hover:border-accent/40 hover:bg-white/10 sm:flex-row"
               >
-                <ArticleImage src={item.image} alt={item.title} />
+                <ArticleImage src={item.image} alt={item.title} position={item.imagePosition} />
                 <div className="flex flex-1 flex-col gap-2">
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2 text-xs text-muted">
