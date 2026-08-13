@@ -13,6 +13,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/muhammad-umair-saeed-8896641b/
 const IOBM_URL = "https://www.io-bm.com";
 const INSTAGRAM_URL = "https://www.instagram.com/muhammedumairsaeed";
 const YOUTUBE_URL = "https://youtube.com/@muhammedumairsaeed?si=s00_5fSGoobgQxgz";
+const IMDB_URL = "https://www.imdb.com/name/nm16554433/";
 const EMAIL = "umair@io-bm.com";
 
 const PROJECTS = [
@@ -296,6 +297,15 @@ export default function Home() {
           <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="transition hover:text-white"><Linkedin size={20} /></a>
           <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition hover:text-white"><Instagram size={20} /></a>
           <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="transition hover:text-white"><Youtube size={20} /></a>
+          <a
+            href={IMDB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="IMDb"
+            className="flex h-5 w-7 items-center justify-center rounded-[3px] bg-[#F5C518] text-[10px] font-extrabold leading-none tracking-tight text-black opacity-90 transition hover:opacity-100"
+          >
+            IMDb
+          </a>
           <a href={IOBM_URL} target="_blank" rel="noopener noreferrer" aria-label="IoBM website" className="transition hover:text-white"><Globe size={20} /></a>
         </div>
       </section>
