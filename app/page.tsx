@@ -61,7 +61,6 @@ export default function Home() {
       <section className="relative flex min-h-screen items-center overflow-hidden">
         <div className="absolute inset-0 bg-grid-fade" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
-          <p className="mb-4 font-mono text-sm text-accent2">Hi, my name is</p>
           <h1 className="break-words font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
             Muhammad
             <br />
@@ -75,12 +74,6 @@ export default function Home() {
             accessible, decisions more informed, and innovation more achievable.&rdquo;
           </p>
           <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
-            <a
-              href="#work"
-              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-white/90 sm:px-6 sm:py-3"
-            >
-              View my work
-            </a>
             <a
               href="#contact"
               className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent hover:bg-accent/10 sm:px-6 sm:py-3"
@@ -182,7 +175,7 @@ export default function Home() {
       <section id="work" className="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="mb-2 font-mono text-sm text-accent2">02. Work</p>
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">Selected projects</h2>
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">Ventures</h2>
         </Reveal>
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((p, i) => (
