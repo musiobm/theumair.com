@@ -45,6 +45,20 @@ const PROJECTS = [
     gradient: "bg-accent2",
     url: "https://www.io-bm.com/cellisys",
   },
+  {
+    title: "IoBM EV",
+    description: "Lightweight electric off-road vehicles — including the flagship Scuttler buggy — engineered across design studios in Dubai, Istanbul, and Delaware.",
+    tags: ["Electric Vehicles", "Mobility"],
+    gradient: "bg-accent",
+    url: "https://www.iobmev.com/",
+  },
+  {
+    title: "Meta IoBM",
+    description: "A metaverse marketing ecosystem for Web3 brands — data-driven, performance-oriented monetization across virtual marketplaces, estates, and entertainment venues.",
+    tags: ["Metaverse", "Web3"],
+    gradient: "bg-accent2",
+    url: "https://www.metaiobm.com/",
+  },
 ];
 
 const GOOGLE_RESULT_URL = "https://share.google/G17BTXpcb8HPAFbGR";
